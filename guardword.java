@@ -18,4 +18,24 @@ public class guardword {
 
         scanner.close();
     }
+
+    private static int calcUniquenessScore(String password) {
+
+        return 0;
+    }
+
+    private static int calcComplexityScore(String password) {
+        return 0;
+    }
+
+    private static int calcLengthScore(String password) {
+        int length = password.length();
+        if (length < 8) {
+            return 0;
+        } else if (length < 12) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
 }
