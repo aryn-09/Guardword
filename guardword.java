@@ -20,7 +20,7 @@ public class guardword {
     }
 
     private static int calcUniquenessScore(String password) {
-
+        
         return 0;
     }
 
