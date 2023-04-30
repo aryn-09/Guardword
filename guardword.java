@@ -18,16 +18,7 @@ public class guardword {
 
         scanner.close();
     }
-
-    private static int calcUniquenessScore(String password) {
-        
-        return 0;
-    }
-
-    private static int calcComplexityScore(String password) {
-        return 0;
-    }
-
+    
     private static int calcLengthScore(String password) {
         int length = password.length();
         if (length < 8) {
@@ -36,6 +27,44 @@ public class guardword {
             return 1;
         } else {
             return 2;
+        }
+    }
+
+    private static int calcComplexityScore(String password) {
+        int score = 0;
+        if (password.matches(".*[a-z].*")) {
+            score++;
+        }
+        if (password.matches(".*[A-Z].*")) {
+            score++;
+        }
+        if (password.matches(".*\\d.*")) {
+            score++;
+        }
+        if (password.matches(".*[@#$%^&+=].*")) {
+            score++;
+        }
+        return score;
+    }
+
+    private static int calcUniquenessScore(String password) {
+        int score = 2;
+        if (password.matches(".*(\\w)\\1+.*")) {
+            score--;
+        }
+        if (password.matches(".*(\\w\\w)\\w*.*")) {
+            score--;
+        }
+        return score;
+    }
+
+    private static String getStrengthLevel(int totalScore) {
+        if (totalScore <= 2) {
+            return "Weak";
+        } else if (totalScore <= 4) {
+            return "Moderate";
+        } else {
+            return "Strong";
         }
     }
 }
