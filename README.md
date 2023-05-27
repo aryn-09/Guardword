@@ -19,7 +19,7 @@ To run the Guardword project on your local machine, follow these steps:
 
 2. Clone the repository:
    ```shell
-   git clone https://github.com/your-username/guardword.git
+   git clone https://github.com/aryn-09/guardword.git
    ```
 
 3. Change directory:
@@ -55,9 +55,7 @@ Once you have launched Guardword, follow the on-screen prompts to interact with 
 
 ## Contributing
 
-Contributions to Guardword are welcome! If you find any issues or have suggestions for improvements, please open an issue on the project's GitHub repository at [https://github.com/your-username/guardword](https://github.com/aryn-09/guardword).
-
-Before contributing, please review the project's code of conduct, available in the CODE_OF_CONDUCT.md file.
+Contributions to Guardword are welcome! If you find any issues or have suggestions for improvements, please open an issue on the project's GitHub repository.
 
 ## License
 
